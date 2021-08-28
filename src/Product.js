@@ -12,7 +12,7 @@ function Product() {
                  
             </div>
             <div className="prodict__rating">
-                <p></p>
+                <p>hey</p>
             </div>
         </div>
     )
