@@ -6,7 +6,7 @@ import React, {createContext, useContext, useReducer} from 'react'
 
     // wrap our app with this on oreder to provide the context we create
 
- export  const StateProvider = ({reducer, initialState, children}) =>(
+ export const StateProvider = ({reducer, initialState, children}) =>(
      <StateContext.Provider value={useReducer(reducer, initialState)} >
          {children}
      </StateContext.Provider>

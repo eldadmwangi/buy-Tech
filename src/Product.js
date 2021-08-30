@@ -4,7 +4,7 @@ import { useStateValue } from './StateProvider'
 
 function Product({id, title, price, rating, image }) {
     const [basket, dispatch] = useStateValue()
-    console.log( basket)
+    // console.log(image)
 
 
     const addToBasket =()=>{
@@ -14,7 +14,8 @@ function Product({id, title, price, rating, image }) {
                 id:id,
                 title:title,
                 price:price,
-                rating:rating
+                rating:rating,
+                image:image
             }
         })
     }
