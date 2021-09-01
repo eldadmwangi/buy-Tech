@@ -13,7 +13,7 @@ function Checkout() {
             <div className ="checkout__left">
                 <img className='checkout__ad' src='https://images-na.ssl-images-amazon.com/images/G/01/credit/img16/CCMP/newstorefront/YACC-desktop-nonprime-banner3.png' alt='checkout banner' />
                 <div className='checkout__tittle'>
-                <h2> hey</h2>
+                <h2> Cart Items</h2>
                 {basket.map((item)=>(
                     <CheckoutProduct 
                         id={item.id}
