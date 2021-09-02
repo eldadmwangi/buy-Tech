@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom'
 import React, {useState} from 'react'
 import './login.css'
 import  {auth} from './firebaseconfig2';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 
 function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] =useState('')
+
 
     const signIn = (e) =>{
        e.preventDefault()
@@ -15,17 +17,17 @@ function Login() {
 
     const register = (e) =>{
         e.preventDefault()
-        auth
-        .createUserWithEmailAndPassword(email, password)
-        .then(({auth})=>{
+        console.log("HAPA called", createUserWithEmailAndPassword)
+        // return console.log("HAPA auth", auth)
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((res)=>{
             // create a user with email and password
-            console.log('hey')
+            console.log("HAPA res", res)
         })
         .catch(error => alert(error.message))
-
     }
 
-
+ 
 
     return (
         <div className='login'>

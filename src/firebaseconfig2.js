@@ -1,4 +1,4 @@
-// import firebase from "firebase/app";
+import * as firebase from "firebase/app";
 import { getAuth } from "firebase/auth"; 
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from "firebase/firestore";
@@ -17,11 +17,32 @@ const firebaseConfig = {
   measurementId: "G-V4V87GQDMK"
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
+const firebaseApp =firebase.initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp)
 const auth = getAuth(firebaseApp);
 
-export {auth, db}
+export  {auth, db}
+
+
+
+
+
+// const register =(e)=>{
+//   e.preventDefault()
+//   const auth = getAuth();
+//   createUserWithEmailAndPassword(auth, email, password)
+//     .then((userCredential) => {
+//         console.log(auth)
+//       // Signed in 
+//       const user = userCredential.user;
+//       // ...
+//     })
+//     .catch((error) => {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//       // ..
+//     });
+// }
 
 
 
