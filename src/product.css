@@ -14,12 +14,23 @@
     margin-right: 20px;
     /* background-color: white; */
 }
+.product:hover {
+    background-color:transparent;
+}
+ 
  .product > img {
      max-height: 200px;
      width: 100%;
      object-fit: contain;
      margin-bottom: 15px;
      padding: 20px;
+ }
+
+ .product >img:hover{
+    -ms-transform: scale(1.0); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.1);
+    zoom: 1;
  }
  .product > button {
      background-color:#ffa500;
