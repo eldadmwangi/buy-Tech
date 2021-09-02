@@ -32,7 +32,7 @@ function Login() {
     return (
         <div className='login'>
             <Link to ="/">
-            <img className="login__logo"  src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuPZUM1hFeoIaDXp5A8Fuy8cXIbfIRPStz9WUWbJN3TgMwKWAB3FRRuzaxy1Kjze2gTSw&usqp=CAU'/>
+            <img className="login__logo"  src='http://localhost:3000/buytech2.png'/>
             </Link>
             <div className="login__container">
                 <h2>SignIn</h2>
