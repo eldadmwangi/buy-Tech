@@ -1,28 +1,45 @@
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import React, {useState} from 'react'
 import './login.css'
 import  {auth} from './firebaseconfig2';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 
 
 function Login() {
+    const history = useHistory()
     const [email, setEmail] = useState('')
     const [password, setPassword] =useState('')
 
 
     const signIn = (e) =>{
        e.preventDefault()
+       signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+    console.log(user)
+    if(user){
+        history.push('/checkout')
+    }
+       })
+       .catch(error => alert(error.message))
+
 
     }
 
     const register = (e) =>{
         e.preventDefault()
-        console.log("HAPA called", createUserWithEmailAndPassword)
+        // console.log("HAPA called", createUserWithEmailAndPassword)
         // return console.log("HAPA auth", auth)
+                    //if the user is authenticated, then an account is created and the history.push takes us to the homepage//
         createUserWithEmailAndPassword(auth, email, password)
-        .then((res)=>{
+        .then((auth)=>{
+            if(auth){
+                history.push('/')
+            }
             // create a user with email and password
-            console.log("HAPA res", res)
+            // console.log("HAPA res", auth)
         })
         .catch(error => alert(error.message))
     }
