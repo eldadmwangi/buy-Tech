@@ -18,9 +18,9 @@ function Login() {
     // Signed in 
     const user = userCredential.user;
     // ...
-    console.log(user)
+    // console.log(user)
     if(user){
-        history.push('/checkout')
+        history.push('/')
     }
        })
        .catch(error => alert(error.message))

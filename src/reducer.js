@@ -1,6 +1,7 @@
     // this is like a global store of things and the reducer listens for changes
 export const initialState = {
     basket :[],
+    user:null
 }
 
 //  build a selector
