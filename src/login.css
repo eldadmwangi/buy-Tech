@@ -11,6 +11,9 @@
    width: 100px;
    margin-right: auto;
    margin-left: auto;
+
+   
+   
 } 
 .login__container {
     width: 300px;
@@ -32,7 +35,8 @@
     width: 98%;
     outline: none;
     border-color: white;
-    box-shadow: 6px 12px 6px  12px whitesmoke;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+    /* box-shadow: 6px 12px 6px  12px whitesmoke; */
     /* box-shadow: inset 10px 5px 25px 5px white, 5px 5px 12px 2px white; */
 }
 .login__container > p {
@@ -41,7 +45,8 @@
    font-family: serif;   
 }
 .login__signInButton {
-    background:rgb(255, 196, 0);
+    /* background:rgb(255, 196, 0); */
+    background: #1862c2;
     padding: 2px;
     border-radius: 2px;
     outline: none;
@@ -49,13 +54,22 @@
     margin-top: 10px;
     height: 20px;
     width: 100%;
+
+    text-align: center;
+    font-family: 'lato','sans-serif';
+    box-shadow:3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff ;
+
 }
 .login__registerButton {
-    background:gray;
+    background:rgb(255,196,0);
     padding: 2px;
     border-radius: 2px;
     outline: none;
     border-color: none;
     margin-top: 10px;
     height: 20px;
+
+    text-align: center;
+    font-family: 'lato','sans-serif';
+    box-shadow:3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff ;
 }
