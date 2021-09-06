@@ -5,10 +5,10 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {Link} from 'react-router-dom'
 import { useStateValue } from './StateProvider';
 import  {auth} from './firebaseconfig2';
-import { signOut } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 
 
-
+ 
 function Header() {
     const [ {basket,user}, dispatch] = useStateValue()
 
@@ -18,7 +18,7 @@ function Header() {
      }
 
      console.log('hey',user)
-    }
+     }
 
 
     return (
@@ -41,13 +41,13 @@ function Header() {
                     </span> 
                     
                     <span className="header__optionLineTwo">
-                       <p> {user? 'Sign Out' : 'Sign In'}</p>
+                        {user? 'signOut':'signIn'}
                     </span>
                 </div>
                 </Link>
 
                 <div className="header__option">
-                <span className="header__optionLineOne">
+                <span className="header__opti onLineOne">
                         Returns
                     </span> 
                     <span className="header__optionLineTwo">
