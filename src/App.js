@@ -9,6 +9,7 @@ import Login from './Login';
 import { onAuthStateChanged } from "firebase/auth";
 import { useStateValue } from './StateProvider';
 import  {auth} from './firebaseconfig2';
+import Payment from './Payment';
 
  
 function App() {
@@ -42,6 +43,9 @@ function App() {
         </Route>
         <Route path ='/Checkout'>
           <Checkout/>
+        </Route>
+        <Route path='/Payment' >
+            <Payment/>
         </Route>
         <Route path ='/'>
       <Home/>
