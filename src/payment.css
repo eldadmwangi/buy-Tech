@@ -23,6 +23,20 @@
 .payment__title {
     flex: 0.2;
 }
-.payment__adress, .payment__items{
+.payment__adress, .payment__items, .payment__details{
     flex: 0.8;
+}
+.payment__button {
+    background:rgb(255,196,0);
+    padding: 2px;
+    border-radius: 2px;
+    outline: none;
+    border-color: none;
+    margin-top: 10px;
+    height: 20px;
+    width: auto;
+
+    text-align: center;
+    font-family: 'lato','sans-serif';
+    box-shadow:3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff ;
 }

@@ -53,13 +53,13 @@ function App() {
         <Route path ='/Checkout'>
           <Checkout/>
         </Route>
-        <Route path='/Payment'>
+        <Route path='/payment'>
           <Elements stripe={stripePromise} >
             <Payment/>
             </Elements>
         </Route>
         <Route path ='/'>
-      <Home/>
+      <Home/> 
       </Route>
       </Switch>
     </div>
